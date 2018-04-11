@@ -215,6 +215,15 @@ const addListeners = () => {
 	document.getElementById('box-right').addEventListener('mouseleave', pulseOutRight); 
 }
 
-
 state.page = 'home';
 document.getElementById('home-link').addEventListener('click', toHome);
+setTimeout(() => {
+	document.getElementById('cover').style.opacity = '0.0';
+}, 1000);
+const intro = setInterval(() => {
+	if(window.getComputedStyle(document.getElementById('cover')).opacity == '0'){
+		document.getElementById('cover').style.display = 'none';
+		clearInterval(intro);
+	}
+})
+
