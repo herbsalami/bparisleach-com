@@ -223,7 +223,8 @@ setTimeout(() => {
 const intro = setInterval(() => {
 	if(window.getComputedStyle(document.getElementById('cover')).opacity == '0'){
 		document.getElementById('cover').style.display = 'none';
+		console.log('done');
 		clearInterval(intro);
 	}
-})
+}, 500)
 
